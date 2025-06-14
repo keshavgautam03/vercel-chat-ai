@@ -15,7 +15,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: your-region
+          aws-region: ap-south-1
           
       - name: Deploy and set up on EC2
         uses: appleboy/ssh-action@master
