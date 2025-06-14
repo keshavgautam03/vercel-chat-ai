@@ -24,7 +24,11 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd /home/ec2-user/chat-app/Ai-powered-chatapp/fullstack-chat-app
+            cd /home/ec2-user
+            if [ ! -d "Ai-powered-chatapp" ]; then
+              git clone https://github.com/keshavgautam03/Ai-powered-chatapp.git
+            fi
+            cd Ai-powered-chatapp/fullstack-chat-app
             git pull origin main
             # Create .env file in backend directory
             cat <<EOF > backend/.env
