@@ -1,4 +1,4 @@
-name: fullstack-chat-app
+version: "3.8"
 services:
   mongo:
     image: mongo:latest
